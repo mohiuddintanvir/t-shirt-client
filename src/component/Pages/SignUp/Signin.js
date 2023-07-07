@@ -1,23 +1,32 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import "./signup.css"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../../Context/AuthProvider';
+import { toast } from 'react-hot-toast';
 
 const Signin = () => {
-    const {createUser}=useContext(AuthContext)
+    const {createUser}=useContext(AuthContext);
+    const [signUpError,setSignUpError]=useState('')
 
     const { register, handleSubmit } = useForm();
-
+const navigate=useNavigate();
     const handleSignIn=data=>{
     console.log(data)
+    setSignUpError('')
+    
     createUser(data.email,data.password)
     .then(result=>{
+        navigate('/')
         const user=result.user;
         console.log(user)
+        toast('User created successfully')
 
     })
-    .catch(error=>console.error(error))
+    .catch(error=>{
+        console.error(error.message)
+        setSignUpError(error.message)
+    })
     }
 
     return (
@@ -40,8 +49,12 @@ const Signin = () => {
                                     
                                 </div>
                                 <div className="input-field">
-                                    <input type="confirm password"  {...register("confirmpassword")} className="input" placeholder="Confirm Password" id='password' autocomplete="off" required />
+                                    <input type="password"  {...register("confirmpassword")} className="input" placeholder="Confirm Password" id='password' autocomplete="off" required />
                                     
+                                </div>
+
+                                <div>
+                                    {signUpError && <p>{signUpError}</p>}
                                 </div>
                                 <div className="input-field">
                                     <input type="submit" className='submit' value="SingUp" />

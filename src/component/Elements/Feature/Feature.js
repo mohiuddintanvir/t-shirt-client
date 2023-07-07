@@ -1,38 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './feature.css'
 import { AiFillStar } from "react-icons/ai";
-import img1 from '../../../img/featured/1.jpg'
-import img2 from '../../../img/featured/2.jpg'
-import img3 from '../../../img/featured/3.jpg'
-import img4 from '../../../img/featured/4.jpg'
+import BookingModal from './BookingModal';
+
 
 const Feature = () => {
-    const featurelist=[
-        {
-            name:'sport Boots',
-            price:999 ,
-            img:img1
+    const [feature, setFeature] = useState([])
 
-        },
-        {
-            name:'Formal Boots',
-            price:999,
-           img:img2
+    useEffect(() => {
+        fetch('https://tshirt-website-server.vercel.app/tshirt')
+            .then(res => res.json())
+            .then(data => setFeature(data))
+    }, [])
 
-        },
-        {
-            name:'Smart Bag',
-            price:999,
-             img:img3
+    console.log(feature)
 
-        },
-        {
-            name:'Baggy Cap',
-            price:999,
-            img:img4
-
-        },
-    ]
     return (
         <div>
             <section id="feature" className='my-5 pb-5'>
@@ -42,23 +24,26 @@ const Feature = () => {
                     <p>Here you can check out our new products with fair price on rymo </p>
                 </div>
                 <div className='row mx-auto container-fluid'>
-                  {
-                    featurelist.map(feature=>  <div className='product text-center col-lg-3 col-md-4 col-12'>
-                    <img className='img-fluid mb-3' src={feature.img} alt="" />
-                    <div className='star'>
-                    <AiFillStar/>
-                    <AiFillStar/>
-                    <AiFillStar/>
-                    <AiFillStar/>
-                    <AiFillStar/>
-                    </div>
-                    <h5>{feature.name}</h5>
-                    <h4 className="p-price">TK.{feature.price}</h4>
-                    <button className="buy-btn">Buy Now</button>
-                </div>)
-                  }
+                    {
+                        feature.map(features => <div className='product text-center col-lg-3 col-md-4 col-12'>
+                            <img className='img-fluid mb-3' src={features.img} alt="" />
+                            <div className='star'>
+                                <AiFillStar />
+                                <AiFillStar />
+                                <AiFillStar />
+                                <AiFillStar />
+                                <AiFillStar />
+                            </div>
+                            <h5>{features.name}</h5>
+                            <h4 className="p-price">TK.{features.price}</h4>
+                           
+                            <button type="button" class="btn buy-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Buy Now
+                            </button>
+                        </div>)
+                    }
                 </div>
-
+<BookingModal></BookingModal>
             </section>
         </div>
     );

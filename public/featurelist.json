@@ -1,0 +1,26 @@
+[
+    {
+        "name":"half t-shirt",
+        "price":400 ,
+        "img":"https://scontent.xx.fbcdn.net/v/t1.15752-9/350370290_1391316091662583_5160141431450505179_n.jpg?stp=dst-jpg_p206x206&_nc_cat=109&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeGP0rYZ0XyLPQp8UrrXTmS3GbFuLVAtguUZsW4tUC2C5eiZxFpTjV4kc2_iZtz4UA_ZXAsOYWU5URgi1oP__G_4&_nc_ohc=VKJN3j8RtoEAX8WT4FA&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQmsW_PLpFolsGAGUQ15z9yk4OGQT5AbKgiWAZ4MDWyDg&oe=649DDCFA"
+
+    },
+    {
+        "name":"Aesthetic T-shirt",
+        "price":400,
+       "img":"https://scontent.xx.fbcdn.net/v/t1.15752-9/350717797_743763924195640_7518788012367216172_n.jpg?stp=dst-jpg_p206x206&_nc_cat=104&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeEyfSeJA3kG4-6vLdzEPuoWcB-Z_LWUdmxwH5n8tZR2bCoqrzK__ocgmct6HajAVEYqysW59DReQ-z8slJYVwqt&_nc_ohc=sjOp-bVXFS8AX8d_0or&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdT58_xUBRPYgeJNxwSs7LJ1ZozWrqV7D_nFnZqgZT_YMg&oe=649DE46C"
+
+    },
+    {
+        "name":"Smart T-shirt",
+       "price":400,
+         "img":"https://scontent.xx.fbcdn.net/v/t1.15752-9/350386348_794266638919753_2462763949813812789_n.jpg?stp=dst-jpg_p206x206&_nc_cat=102&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeHmusDTUTSH5px163nFglijuduknLqGqXu526Scuoape8zbVRD45kTieLNEJSw1uJ75s3CgxZ51aZZVEWxfZe6u&_nc_ohc=zJZSsf_f4N0AX_Ip7nV&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQajhmB33R3dFEwMzLVhSQxdorBUXTw9qNe45stdSOG1g&oe=649DE939"
+
+    },
+    {
+       " name":"Baggy T-shirt",
+       "price":400,
+        "img":"https://scontent.xx.fbcdn.net/v/t1.15752-9/350653994_3493330344238295_1845784256944690373_n.jpg?stp=dst-jpg_p206x206&_nc_cat=110&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeHg2GEs9ml0XpfHWMLBM0dsq2KTDOhjWOKrYpMM6GNY4hhRgRCH0j7bzUjkeg3SY5WOrAOaGB6-G6u5-dAeu-15&_nc_ohc=DeWb02VMh_gAX_iCAb5&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdT6Ef7ggc57u-tK0jjuz2VQql4fyWC57yp0K2x2cTHIgw&oe=649DD07D"
+
+    }
+]

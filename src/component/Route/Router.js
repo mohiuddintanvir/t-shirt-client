@@ -8,6 +8,7 @@ import Contactus from "../Pages/Contactus";
 import Login from "../Pages/login/Login";
 import Signin from "../Pages/SignUp/Signin";
 import DeshBoard from "../Pages/DeshBoard/Deshboart/DeshBoard";
+import PrivateRoutes from "./privateRoutes/PrivateRoutes";
 
  const router = createBrowserRouter([
     {
@@ -16,37 +17,39 @@ import DeshBoard from "../Pages/DeshBoard/Deshboart/DeshBoard";
       children:[
         {
           path: "/",
-      element: <Home></Home>,
+      element: <PrivateRoutes><Home></Home></PrivateRoutes> ,
         },
         {
           path: "/shop",
-      element: <Shop></Shop>,
+      element:<PrivateRoutes><Shop></Shop></PrivateRoutes>  ,
         },
         {
           path: "/blog",
-      element: <Blog></Blog>,
+      element:<PrivateRoutes><Blog></Blog></PrivateRoutes>  ,
         },
         {
           path: "/about",
-      element:<About></About> ,
+      element:<PrivateRoutes><About></About></PrivateRoutes>  ,
         },
         {
           path: "/contact",
-      element: <Contactus></Contactus>,
+      element:<PrivateRoutes><Contactus></Contactus></PrivateRoutes>  ,
         },
         {
           path: "/login",
-      element: <Login></Login>,
+      element:<Login></Login> ,
         },
         {
           path: "/signup",
-      element: <Signin></Signin>,
+      element:<Signin></Signin> ,
         },
       ]
     },
     {
       path:'/deshboard',
-      element:<DeshBoard></DeshBoard>
+      element:<PrivateRoutes><DeshBoard></DeshBoard></PrivateRoutes> 
     }
   ]);
   export default router;
+
+

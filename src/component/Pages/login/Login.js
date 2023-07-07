@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import './login.css'
 import img1 from "../../../img/cart/cart.jpg"
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../../Context/AuthProvider';
 
@@ -17,6 +17,11 @@ const Login = () => {
 
     const { register, handleSubmit } = useForm();
 
+
+    const location=useLocation();
+    const Navigate=useNavigate();
+    const from=location.state?.form?.pathname || '/'
+
     const handleLogIn = data => {
         console.log(data)
         setLogInError('')
@@ -24,6 +29,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                Navigate(from,{replace:true});
 
             })
             .catch(error => {
